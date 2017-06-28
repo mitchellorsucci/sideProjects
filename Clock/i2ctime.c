@@ -8,7 +8,11 @@
 #include<fcntl.h>
 #include<time.h>
 
-int i2c_adx = 0b01110001;
+#define i2c_adx		0b01110001
+#define adc_read	0x91
+#define adc_write	0x90
+#define adc_slave	0x48
+
 char i2cport[] = "/dev/i2c-1";
 void writeByte(int fd, char * data);
 void writeCandD(int fd, char command, char data);
@@ -25,11 +29,13 @@ int main() {
 		exit(1);
 	}
 
-	// Attach slave to the bus
+	// Attach seg 7 to the bus
 	if(ioctl(fd, I2C_SLAVE,i2c_adx) < 0) {
 		printf("FAILED TO LINK WITH SLAVE\n");
 		exit(1);
 	}
+
+	// Attach adc to the bus
 	
 
 	//unsigned char clear = 0x76;
