@@ -1,6 +1,0 @@
-Speedy thing goes in, speedy thing comes out.
-5 10 15 20 25 30
-5 -746
-2
-aepkma
-
