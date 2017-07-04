@@ -1,0 +1,283 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:56 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_rst_ps7_0_100M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:56 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps7_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ps7_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 12) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:56 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_processing_system7_0_0 (xilinx.com:ip:processing_system7:5.5) from (Rev. 3) to (Rev. 5)
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP0_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP0_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP1_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP1_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP0_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP1_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:55 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_gpio_2_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 13) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:55 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_1_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_axi_gpio_1_1 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 13) to (Rev. 15)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration . Attempting partial upgrade.
+This process will attempt to set as many user parameters as possible.Please check the parameters whose values were not applied
+
+Unable to set the value 'rgb_led' on parameter 'GPIO2 BOARD INTERFACE' due to the following failure - 
+Value 'rgb_led' is out of the range for parameter 'GPIO2 BOARD INTERFACE(GPIO2_BOARD_INTERFACE)' for BD Cell 'design_1_axi_gpio_1_1' . Valid values are - Custom
+.Restoring to an old valid value of 'Custom'
+
+Unable to set the value 'leds_4bits' on parameter 'GPIO BOARD INTERFACE' due to the following failure - 
+Value 'leds_4bits' is out of the range for parameter 'GPIO BOARD INTERFACE(GPIO_BOARD_INTERFACE)' for BD Cell 'design_1_axi_gpio_1_1' . Valid values are - Custom
+.Restoring to an old valid value of 'Custom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:axi_gpio:2.0 -user_name design_1_axi_gpio_1_1
+set_property -dict "\
+  CONFIG.C_ALL_INPUTS {0} \
+  CONFIG.C_ALL_INPUTS_2 {0} \
+  CONFIG.C_ALL_OUTPUTS {0} \
+  CONFIG.C_ALL_OUTPUTS_2 {0} \
+  CONFIG.C_DOUT_DEFAULT {0x00000000} \
+  CONFIG.C_DOUT_DEFAULT_2 {0x00000000} \
+  CONFIG.C_GPIO2_WIDTH {6} \
+  CONFIG.C_GPIO_WIDTH {4} \
+  CONFIG.C_INTERRUPT_PRESENT {0} \
+  CONFIG.C_IS_DUAL {1} \
+  CONFIG.C_TRI_DEFAULT {0xFFFFFFFF} \
+  CONFIG.C_TRI_DEFAULT_2 {0xFFFFFFFF} \
+  CONFIG.Component_Name {design_1_axi_gpio_1_1} \
+  CONFIG.GPIO.BOARD.ASSOCIATED_PARAM {GPIO_BOARD_INTERFACE} \
+  CONFIG.GPIO2.BOARD.ASSOCIATED_PARAM {GPIO2_BOARD_INTERFACE} \
+  CONFIG.GPIO2_BOARD_INTERFACE {rgb_led} \
+  CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
+  CONFIG.S_AXI_ACLK.ASSOCIATED_BUSIF {S_AXI} \
+  CONFIG.S_AXI_ACLK.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.S_AXI_ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.USE_BOARD_FLOW {true} " [get_ips design_1_axi_gpio_1_1]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Jun 29 09:35:55 2017
+| Host         : mitchell-work running 64-bit Ubuntu 16.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 13) to (Rev. 15)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_axi_gpio_0_0'.
+
+
+-Upgrade has removed interface 'GPIO2'
+
+
+4. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axi_gpio_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'gpio_io_i' width 32 differs from original width 4
+
+-Upgrade has removed port 'gpio2_io_i'
+
+-Upgrade has added port 'gpio_io_o'
+
+-Upgrade has added port 'gpio_io_t'
+
+
+5. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration . Attempting partial upgrade.
+This process will attempt to set as many user parameters as possible.Please check the parameters whose values were not applied
+
+Unable to set the value 'sws_2bits' on parameter 'GPIO2 BOARD INTERFACE' due to the following failure - 
+Value 'sws_2bits' is out of the range for parameter 'GPIO2 BOARD INTERFACE(GPIO2_BOARD_INTERFACE)' for BD Cell 'design_1_axi_gpio_0_0' . Valid values are - Custom
+.Restoring to an old valid value of 'Custom'
+
+Unable to set the value 'btns_4bits' on parameter 'GPIO BOARD INTERFACE' due to the following failure - 
+Value 'btns_4bits' is out of the range for parameter 'GPIO BOARD INTERFACE(GPIO_BOARD_INTERFACE)' for BD Cell 'design_1_axi_gpio_0_0' . Valid values are - Custom
+.Restoring to an old valid value of 'Custom'
+
+Update of parameter PARAM_VALUE.C_ALL_OUTPUTS failed.ERROR: [Common 17-55] 'get_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+
+
+Customization errors found on 'design_1_axi_gpio_0_0'. Restoring to previous valid configuration.
+
+An attempt to modify the value of disabled parameter 'C_ALL_INPUTS_2' from '1' to '0' has been ignored for IP 'design_1_axi_gpio_0_0'
+
+Update of parameter PARAM_VALUE.C_ALL_OUTPUTS failed.ERROR: [Common 17-55] 'get_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+
+
+Customization errors found during restoring IP 'design_1_axi_gpio_0_0' to previous valid configuration.
+
+Failed to restore IP 'design_1_axi_gpio_0_0' customization to its previous valid configuration.
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:axi_gpio:2.0 -user_name design_1_axi_gpio_0_0
+set_property -dict "\
+  CONFIG.C_ALL_INPUTS {1} \
+  CONFIG.C_ALL_INPUTS_2 {1} \
+  CONFIG.C_ALL_OUTPUTS {0} \
+  CONFIG.C_ALL_OUTPUTS_2 {0} \
+  CONFIG.C_DOUT_DEFAULT {0x00000000} \
+  CONFIG.C_DOUT_DEFAULT_2 {0x00000000} \
+  CONFIG.C_GPIO2_WIDTH {2} \
+  CONFIG.C_GPIO_WIDTH {4} \
+  CONFIG.C_INTERRUPT_PRESENT {0} \
+  CONFIG.C_IS_DUAL {1} \
+  CONFIG.C_TRI_DEFAULT {0xFFFFFFFF} \
+  CONFIG.C_TRI_DEFAULT_2 {0xFFFFFFFF} \
+  CONFIG.Component_Name {design_1_axi_gpio_0_0} \
+  CONFIG.GPIO.BOARD.ASSOCIATED_PARAM {GPIO_BOARD_INTERFACE} \
+  CONFIG.GPIO2.BOARD.ASSOCIATED_PARAM {GPIO2_BOARD_INTERFACE} \
+  CONFIG.GPIO2_BOARD_INTERFACE {sws_2bits} \
+  CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
+  CONFIG.S_AXI_ACLK.ASSOCIATED_BUSIF {S_AXI} \
+  CONFIG.S_AXI_ACLK.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.S_AXI_ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.USE_BOARD_FLOW {true} " [get_ips design_1_axi_gpio_0_0]
+
+
