@@ -109,10 +109,10 @@ int main() {
 			writeCandD(fd, 0x77, 0x00);
 		}
 		usleep(50000);
-		// writeADC(adc);
-		// usleep(1000);
-		// int value = readADC(adc);
-		// printf("\tAIN0:\t%d\n", value);
+		writeADC(adc);
+		usleep(1000);
+		int value = readADC(adc);
+		printf("\tAIN0:\t%d\n", value);
 	}
 
 
