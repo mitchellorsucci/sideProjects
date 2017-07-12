@@ -1,0 +1,9 @@
+[Unit]
+Description=Clock auto-startup
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/UWgeneric/clock.sh
+
+[Install]
+WantedBy=multi-user.target
