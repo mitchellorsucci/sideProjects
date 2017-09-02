@@ -1,4 +1,4 @@
-CC = gcc -Wall -std=gnu99
+CC = gcc -std=gnu99
 SRC1= i2ctest.c
 SRC2= i2ctime.c
 SRC3= clockInt.c
@@ -19,7 +19,7 @@ $(EXEC3): $(SRC3) $(HEADERS)
 	$(CC) -lrt -g -o $(EXEC3) $(SRC3)
 
 $(EXEC4): $(SRC4) $(HEADERS)
-	$(CC) -lrt -g -o $(EXEC4) $(SRC4)
+	gcc -std=gnu99 -lrt -g -o $(EXEC4) $(SRC4)
 
 .PHONY: clean
 
