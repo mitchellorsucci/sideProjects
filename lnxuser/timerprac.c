@@ -4,7 +4,8 @@
 
 
 
-#define FREQ_NANO   200000000 //5 HZ
+//#define FREQ_NANO   200000000 // 5 HZ
+#define FREQ_NANO   100000000 // 10 Hz
 #define CLOCKID     CLOCK_REALTIME
 #define SIG         SIGRTMIN
 
@@ -63,7 +64,7 @@ int main() {
     setEdge(48, "falling");
 
 
-    int timeout = 50;
+    int timeout = -50;
     char filepath[] = "/sys/class/gpio/gpio48/value";
     int fd = open(filepath, O_RDONLY);
     if(fd < 0) {
@@ -89,21 +90,13 @@ int main() {
 }
 
 void handler1() {
-    if(count % 2 == 0) {
-        writeMultiple(numPins, pinArray, 0x5);
-    } else {
-        writeMultiple(numPins, pinArray, 0x0);
-    }
-    count++;
+    writeMultiple(numPins, pinArray, 1 << count);
+    count = (count == 4) ? 0: count + 1;
 }
 
 void handler2() {
-    if(count % 2 == 0) {
-        writeMultiple(numPins, pinArray, 0xA);
-    } else {
-        writeMultiple(numPins, pinArray, 0x0);
-    }
-    count++;
+    writeMultiple(numPins, pinArray, 0x8 >> count);
+    count = (count == 4) ? 0: count + 1;
 }
 
 void changeHandler() {
