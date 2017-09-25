@@ -22,6 +22,7 @@ void changeHandler();
 int main() {
 
     openGPIO(48, INPUT, 0);
+    openGPIO(49, INPUT, 0);
     openMultiple(numPins, pinArray, 0x0, 0x0);
 
     timer_t timerid;
@@ -61,29 +62,49 @@ int main() {
 		exit(EXIT_FAILURE);
 	}
 
-    setEdge(48, "falling");
+    setEdge(48, "rising");
+    setEdge(49, "rising");
 
-
+    int fds[2] = {0, 0};
     int timeout = -50;
     char filepath[] = "/sys/class/gpio/gpio48/value";
-    int fd = open(filepath, O_RDONLY);
-    if(fd < 0) {
+    char filepath1[] = "/sys/class/gpio/gpio49/value";
+    fds[0] = open(filepath, O_RDONLY);
+    if(fds[0] < 0) {
         fprintf(stderr, "Faield to open the GPIO value file\n");
         exit(EXIT_FAILURE);
     }
 
-    struct pollfd fdset;
+    fds[1] = open(filepath1, O_RDONLY);
+    if(fds[1] < 0) {
+        fprintf(stderr, "Faield to open the GPIO value file\n");
+        exit(EXIT_FAILURE);
+    }
+
+    struct pollfd fdset[2];
 
     while(1) {
-        char buf;
+
+        char buf1 = 0, buf2 = 0;
         memset((void*)&fdset, 0, sizeof(fdset));
-        fdset.fd = fd;
-        fdset.events = POLLPRI;
-        poll(&fdset, 1, timeout);
-        if(fdset.revents & POLLPRI) {
-            lseek(fd, 0, SEEK_SET);
-            read(fd, &buf, 1);
+        fdset[0].fd = fds[0];
+        fdset[0].events = POLLPRI;
+        fdset[1].fd = fds[1];
+        fdset[1].events = POLLPRI;
+        poll(fdset, 2, timeout);
+        if(fdset[0].revents & POLLPRI || fdset[1].revents & POLLPRI) {
+            lseek(fds[0], 0, SEEK_SET);
+            lseek(fds[1], 0, SEEK_SET);
+            read(fds[0], &buf1, 1);
+            read(fds[1], &buf2, 1);
             changeHandler();
+        }
+        if(buf1 == '1') {
+            fprintf(stderr, "Button 1 pressed\n");
+            usleep(10000);
+        } else if(buf2 == '1') {
+            fprintf(stderr, "Button 2 pressed\n");
+            usleep(10000);
         }
     }
 
